@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+
+
+int sayi; 
+int birler, onlar, yuzler, binler; 
+printf("4 basamakli bir sayi giriniz : "); 
+scanf("%d",&sayi); 
+
+birler = sayi % 10; 
+sayi = sayi / 10; 
+onlar = sayi % 10; 
+sayi = sayi / 10; 
+yuzler = sayi % 10; 
+sayi = sayi / 10; 
+binler = sayi %10;
+
+printf("-------------sayinin cozumlenmesi------------\n");
+
+printf(" %d adet binlik sayi \n", binler); 
+printf(" %d adet yuzluk sayi \n", yuzler); 
+printf(" %d adet onluk sayi \n", onlar); 
+printf(" %d adet birlik sayi vardir\n", birler); 
+
+getche();
+
+return 0;
+
+}
