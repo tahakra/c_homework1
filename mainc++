@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+	int num,e,tutar,hn,p,ı,gon;
+	unsigned tt,t,bakiye;
+	bakiye=1300;
+	printf("Hosgeldiniz.\n");
+	
+	printf("Giris yapmak icin kullanici adinizi giriniz\n");
+	scanf("%d",&ı);
+	
+	printf("Kullanici sifrenizi giriniz\n");
+	scanf("%d",&p);
+	
+		
+
+
+
+
+	printf("Menum\n");
+	printf("1-Bakiye Bilgileri\n");
+	printf("2-Hesaba para ekleme\n");
+	printf("3-Hesaptan para cekme\n");
+	printf("4-Para gonderme\n");
+	printf("5-Cikis\n");
+	printf("Islem yapmak icin menumdeki islemlerden herhangi birini seciniz\n");
+	scanf("%d",&num);
+	printf("\n");
+	switch(num)
+	{
+		case 1:
+			printf("Bakiyenizde %d TL bulunmaktadir\n",bakiye);
+			break;
+
+		case 2:
+			printf("Ekleyeceginiz tutari giriniz\n");
+			scanf("%d",&e);//e eklenecek tutarı simgeliyor
+		    t=e+bakiye;// burada "t" para eklendikten  sonraki miktari simgeliyor
+			printf("Isleminiz basariyla gerceklesmistir\n");
+            printf("Suan yeni bakiyeniz=%d",t);
+			break;
+
+		case 3:
+				printf("Cekmek istediginiz tutari giriniz\n");
+				scanf("%d",&tutar);
+				t=bakiye-tutar;//burada "t" para cekildikten  sonraki miktari simgeliyor
+				printf("Isleminiz basariyla gerceklesmistir\n");
+				printf("Suan yeni bakiyeniz=%d",t);
+				break;
+		case 4:
+			printf("Gondermek istediginiz hesabin 5 haneli hesap numarasini yaziniz\n");
+			scanf("%d",&hn);//hn 5 haneli numarayı simgeliyor
+			printf("%d nolu hesaba gondermek istediginiz tutari giriniz\n",hn);
+			scanf("%d",&gon);//gon=gonderilen tutarı simgeliyor
+			tt=bakiye-gon;//burada "tt" para gonderildikten  sonraki miktari simgeliyor
+			printf("Isleminiz basariyla gerceklesmistir.Suan hesabinizda %d kullanilir bakiye bulunmaktadir\n",tt);
+
+			break;
+		case 5:
+			printf("tesekkür ederiz");
+			break;
+		default:
+			printf("Lutfen isleminizi seciniz aksi taktirde otomatik olarak hesabınızdan cıkacak");
+			break;
+	}
+
+	getch();
+	return 0;
+
+
+	
+}
+	
+
+	
